@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Star Sparkle</title>
+</head>
+
+<body>
+
+<canvas id="myCanvas" width="1500" height="1000" style="border:1px solid black;"></canvas>
+
+<script>
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
+
+canvas.addEventListener("click", sparkle);
+
+function sparkle(event)
+{
+    let x = event.offsetX;
+    let y = event.offsetY;
+
+    for(let i = 0; i < 5; i++)
+    {
+        let sx = x + Math.random() * 40 - 20;
+        let sy = y + Math.random() * 40 - 20;
+
+        drawStar(sx, sy);
+    }
+}
+
+function drawStar(x, y)
+{
+    ctx.fillStyle = "gold";
+    ctx.fillText("★", x, y);
+    ctx.font="30px Arial";
+
+    setTimeout(function()
+    {
+        ctx.clearRect(x - 20, y - 40, 60, 60);
+    }, 400);
+}
+</script>
+
+</body>
+</html>
