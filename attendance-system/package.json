@@ -1,0 +1,9 @@
+{
+  "name": "attendance-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beginner-friendly attendance management mini project using React, Express and MongoDB",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend"
+  }
+}
